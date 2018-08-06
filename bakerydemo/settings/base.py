@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'modelcluster',
     'taggit',
+    'wagtail_personalisation',
     'wagtailfontawesome',
 
     'django.contrib.admin',
