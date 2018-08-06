@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load wagtailimages_tags navigation_tags %}
+{% load wagtailcore_tags wagtailimages_tags navigation_tags %}
 
 {% block head-extra %}
     <style>
@@ -79,7 +79,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 location-body">
-                    {{ page.body }}
+                    {% include_block page.body %}
                 </div>
             </div>
         </div>

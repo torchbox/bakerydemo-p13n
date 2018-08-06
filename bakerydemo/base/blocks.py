@@ -51,6 +51,16 @@ class BlockQuote(PersonalisedStructBlock):
         template = "blocks/blockquote.html"
 
 
+class PersonalisedParagraph(PersonalisedStructBlock):
+    paragraph = RichTextBlock(
+        template="blocks/paragraph_block.html"
+    )
+
+    class Meta:
+        icon = "fa-paragraph"
+        template = "blocks/personalised_paragraph_block.html"
+
+
 # StreamBlocks
 class BaseStreamBlock(StreamBlock):
     """
@@ -61,6 +71,7 @@ class BaseStreamBlock(StreamBlock):
         icon="fa-paragraph",
         template="blocks/paragraph_block.html"
     )
+    personalised_paragraph = PersonalisedParagraph()
     image_block = ImageBlock()
     block_quote = BlockQuote()
     embed_block = EmbedBlock(
