@@ -4,8 +4,10 @@ from wagtail.core.blocks import (
     CharBlock, ChoiceBlock, RichTextBlock, StreamBlock, StructBlock, TextBlock,
 )
 
+from wagtail_personalisation.blocks import PersonalisedStructBlock
 
-class ImageBlock(StructBlock):
+
+class ImageBlock(PersonalisedStructBlock):
     """
     Custom `StructBlock` for utilizing images with associated caption and
     attribution data
@@ -19,7 +21,7 @@ class ImageBlock(StructBlock):
         template = "blocks/image_block.html"
 
 
-class HeadingBlock(StructBlock):
+class HeadingBlock(PersonalisedStructBlock):
     """
     Custom `StructBlock` that allows the user to select h2 - h4 sizes for headers
     """
@@ -36,7 +38,7 @@ class HeadingBlock(StructBlock):
         template = "blocks/heading_block.html"
 
 
-class BlockQuote(StructBlock):
+class BlockQuote(PersonalisedStructBlock):
     """
     Custom `StructBlock` that allows the user to attribute a quote to the author
     """
